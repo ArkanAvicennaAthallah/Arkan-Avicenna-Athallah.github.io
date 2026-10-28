@@ -1,0 +1,2272 @@
+x`/* =====================================================
+   REPTILIA WEBSITE
+   FULL STYLE CSS
+   ===================================================== */
+
+
+/* =====================================================
+   1. BASIC
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    background-color: #f3f0e7;
+    color: #263127;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   2. HEADER
+   ===================================================== */
+
+header {
+    background-color: #193329;
+
+    color: white;
+
+    min-height: 180px;
+
+    padding: 20px 7%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.logo h1 {
+    margin: 0;
+
+    font-size: 44px;
+
+    letter-spacing: 3px;
+}
+
+
+.logo p {
+    margin-top: 8px;
+
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   3. NAVIGATION
+   ===================================================== */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin-top: 0;
+    padding: 18px 7%;
+    box-sizing: border-box;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #193329;
+    color: white;
+}
+
+/* Mengubah warna semua tautan navbar */
+nav a,
+nav a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* Warna saat kursor diarahkan ke menu */
+nav a:hover {
+    color: #c5a76a;
+}
+
+/* =====================================================
+   4. RECOMMENDATION DROPDOWN
+   ===================================================== */
+
+.nav-dropdown {
+    position: relative;
+
+    display: block;
+
+    width: auto;
+
+    height: 18px;
+
+    margin: 0;
+
+    padding: 0;
+
+    flex-shrink: 0;
+}
+
+
+/* Tulisan Recommendation */
+
+.nav-dropdown summary {
+    list-style: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+    line-height: 18px;
+
+    white-space: nowrap;
+}
+
+
+/* Hilangkan tanda default browser */
+
+.nav-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Hover Recommendation */
+
+.nav-dropdown summary:hover {
+    color: #c5a76a;
+}
+
+
+/* =====================================================
+   DROPDOWN BOX
+   ===================================================== */
+
+.nav-dropdown-content {
+    display: none;
+
+    position: absolute;
+
+    top: 28px;
+
+    right: 0;
+
+    width: 210px;
+
+    padding: 8px 0;
+
+    background-color: #f3f0e7;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+
+    z-index: 9999;
+}
+
+
+/* Ketika Recommendation diklik */
+
+.nav-dropdown[open] .nav-dropdown-content {
+    display: block;
+}
+
+
+/* =====================================================
+   DROPDOWN LINKS
+   ===================================================== */
+
+.nav-dropdown-content a {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 !important;
+
+    padding: 13px 20px;
+
+    color: #263d30 !important;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.3;
+}
+
+
+.nav-dropdown-content a:hover {
+    background-color: #e6e1d2;
+
+    color: #263d30 !important;
+}
+
+
+/* =====================================================
+   5. IFRAME
+   ===================================================== */
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 1000px;
+    border: none;
+    background-color: #f3f0e7;
+
+    scrollbar-width: none;
+}
+
+iframe::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =====================================================
+   6. FOOTER
+   ===================================================== */
+
+footer {
+    background-color: #193329;
+
+    color: white;
+
+    padding: 30px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+footer h2 {
+    margin: 0;
+
+    letter-spacing: 3px;
+}
+
+
+footer p {
+    color: #cfd4cc;
+}
+
+
+/* =====================================================
+   7. GENERAL PAGE CONTAINER
+   ===================================================== */
+
+.page-container {
+    width: 86%;
+
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 80px 0;
+}
+
+
+/* =====================================================
+   8. GENERAL PAGE HEADING
+   ===================================================== */
+
+.page-heading {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+
+.page-heading h1 {
+    font-size: 55px;
+
+    line-height: 1;
+
+    margin: 20px 0;
+}
+
+
+.page-heading > p:last-child {
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+.label {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    color: #6d765d;
+}
+
+
+/* =====================================================
+   9. BUTTON
+   ===================================================== */
+
+.button {
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-top: 25px;
+
+    padding: 16px 28px;
+
+    background-color: #263d30;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: 0.2s;
+}
+
+
+.button:hover {
+    background-color: #b39a64;
+}
+
+
+/* =====================================================
+   10. HOME - HERO
+   ===================================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+
+    background-color: #f3f0e7;
+}
+
+
+.hero-text {
+    width: 55%;
+
+    padding: 90px 7%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.hero h1 {
+    font-size: 65px;
+
+    line-height: 1.02;
+
+    margin: 25px 0;
+
+    color: #1d2920;
+}
+
+
+.hero-description {
+    max-width: 450px;
+
+    line-height: 1.7;
+
+    color: #5d625b;
+}
+
+
+.hero-image {
+    width: 45%;
+
+    background-color: #304b3b;
+}
+
+
+.hero-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.image-placeholder {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #304b3b;
+
+    color: #d9d2bd;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   11. HOME - INTRO
+   ===================================================== */
+
+.intro {
+    display: flex;
+
+    gap: 100px;
+
+    padding: 120px 10%;
+
+    background-color: #f3f0e7;
+}
+
+
+.intro-title {
+    width: 45%;
+}
+
+
+.intro-text {
+    width: 55%;
+
+    padding-top: 30px;
+}
+
+
+.intro h2 {
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    margin-top: 25px;
+}
+
+
+.intro-text p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #5d625b;
+
+    max-width: 600px;
+}
+
+
+.intro-text a {
+    color: #263d30;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   12. HOME - STATISTICS
+   ===================================================== */
+
+.statistics {
+    display: flex;
+
+    justify-content: space-around;
+
+    padding: 75px 5%;
+
+    background-color: #263d30;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.stat h2 {
+    margin: 0;
+
+    font-size: 55px;
+}
+
+
+.stat p {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   13. HOME - SERVICES
+   ===================================================== */
+
+.services {
+    padding: 120px 7%;
+
+    background-color: #e6e1d2;
+}
+
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+
+.section-heading h2 {
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    margin-top: 20px;
+}
+
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.service {
+    background-color: #f3f0e7;
+}
+
+
+.service-image {
+    height: 250px;
+
+    background-color: #304b3b;
+
+    color: #d9d2bd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    letter-spacing: 2px;
+
+    font-size: 12px;
+}
+
+
+.service-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.service h3,
+.service p {
+    padding-left: 25px;
+
+    padding-right: 25px;
+}
+
+
+.service h3 {
+    margin-top: 25px;
+}
+
+
+.service p {
+    padding-bottom: 20px;
+
+    color: #686b64;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   14. HOME - CARE
+   ===================================================== */
+
+.care {
+    display: flex;
+
+    min-height: 600px;
+
+    background-color: #1d352a;
+
+    color: white;
+}
+
+
+.care-image {
+    width: 50%;
+}
+
+
+.care-image .image-placeholder {
+    height: 100%;
+
+    background-color: #304b3b;
+}
+
+
+.care-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.care-text {
+    width: 50%;
+
+    padding: 100px 8%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.care-text h2 {
+    font-size: 48px;
+
+    line-height: 1.05;
+}
+
+
+.care-text p:not(.label) {
+    line-height: 1.7;
+
+    color: #d6d8d1;
+}
+
+
+/* =====================================================
+   15. HOME - PRODUCTS
+   ===================================================== */
+
+.products {
+    padding: 120px 7%;
+
+    text-align: center;
+
+    background-color: #f3f0e7;
+}
+
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-bottom: 50px;
+}
+
+
+.product {
+    text-align: left;
+}
+
+
+.product-image {
+    height: 380px;
+
+    background-color: #d8d2c2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #6b705f;
+
+    letter-spacing: 2px;
+}
+
+
+.product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.product h3 {
+    margin-top: 25px;
+
+    font-size: 18px;
+}
+
+
+.product p {
+    color: #777;
+}
+
+
+/* =====================================================
+   16. HOME - REPTILE GUIDE
+   ===================================================== */
+
+.guide {
+    padding: 120px 7%;
+
+    background-color: #e6e1d2;
+}
+
+
+.guide-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.guide-card {
+    text-align: left;
+}
+
+
+.guide-image {
+    height: 330px;
+
+    background-color: #304b3b;
+
+    color: #d9d2bd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    letter-spacing: 2px;
+}
+
+
+.guide-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.guide-card h3 {
+    letter-spacing: 2px;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   17. HOME - FAQ
+   ===================================================== */
+
+.faq {
+    padding: 120px 15%;
+
+    background-color: #f3f0e7;
+}
+
+
+.faq h2 {
+    font-size: 48px;
+
+    margin-bottom: 50px;
+}
+
+
+.faq details {
+    border-bottom: 1px solid #c9c4b6;
+
+    padding: 25px 0;
+}
+
+
+.faq summary {
+    cursor: pointer;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+.faq details p {
+    line-height: 1.7;
+
+    color: #666;
+
+    max-width: 700px;
+}
+
+
+/* =====================================================
+   18. SHOP - CATEGORY
+   ===================================================== */
+
+.category-menu {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 60px;
+}
+
+
+.category-menu a {
+    color: #263d30;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #263d30;
+
+    padding-bottom: 5px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.category-menu a:hover {
+    color: #b69a63;
+
+    border-color: #b69a63;
+}
+
+
+/* =====================================================
+   19. SHOP - PRODUCT GRID
+   ===================================================== */
+
+.shop-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 55px 25px;
+}
+
+
+.shop-product {
+    background-color: transparent;
+}
+
+
+
+.shop-image {
+    height: 380px;
+
+    background-color: #304b3b;
+
+    color: #d9d2bd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    letter-spacing: 2px;
+
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.shop-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+
+.shop-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.product-category {
+    margin-top: 20px;
+
+    color: #71806b;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+.shop-product h2 {
+    font-size: 21px;
+
+    margin: 10px 0;
+}
+
+
+.shop-product > p {
+    color: #666;
+}
+
+
+.shop-product a {
+    color: #263d30;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.shop-product a:hover {
+    color: #b69a63;
+}
+
+
+/* =====================================================
+   20. TIPS & CARE
+   ===================================================== */
+
+.care-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.care-card {
+    background-color: #e6e1d2;
+
+    padding-bottom: 30px;
+}
+
+
+.care-card-image {
+    height: 300px;
+
+    background-color: #304b3b;
+
+    color: #d9d2bd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.care-card-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.care-card .label,
+.care-card h2,
+.care-card p:not(.label),
+.care-card a {
+    margin-left: 25px;
+
+    margin-right: 25px;
+}
+
+
+.care-card h2 {
+    font-size: 25px;
+}
+
+
+.care-card p:not(.label) {
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+.care-card a {
+    color: #263d30;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   21. RECOMMENDATION PAGE
+   ===================================================== */
+
+.recommendation-header {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+
+.recommendation-header h1 {
+    font-size: 55px;
+
+    line-height: 1.05;
+
+    margin: 20px 0;
+}
+
+
+.recommendation-header > p:last-child {
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+.reptile-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.reptile-card {
+    background-color: #e6e1d2;
+
+    padding-bottom: 30px;
+}
+
+
+.reptile-image {
+    width: 100%;
+
+    height: 300px;
+
+    background-color: #304b3b;
+
+    color: #d9d2bd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    letter-spacing: 2px;
+
+    font-size: 12px;
+}
+
+
+.reptile-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.reptile-card h2 {
+    font-size: 22px;
+
+    margin: 25px 25px 10px;
+}
+
+
+.reptile-card p {
+    margin: 0 25px 20px;
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+.reptile-card a {
+    margin-left: 25px;
+
+    color: #263d30;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.reptile-card a:hover {
+    color: #b69a63;
+}
+
+
+/* =====================================================
+   22. REPTILE DETAIL
+   ===================================================== */
+
+.reptile-detail {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+.reptile-detail-image {
+    height: 650px;
+
+    background-color: #304b3b;
+
+    color: #d9d2bd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    letter-spacing: 3px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+    
+    overflow: hidden;
+}
+
+
+.reptile-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+
+.reptile-detail-text {
+    padding-top: 10px;
+}
+
+
+.reptile-detail-text h1 {
+    font-size: 60px;
+
+    line-height: 1;
+
+    margin: 20px 0 30px;
+}
+
+
+.reptile-detail-text h2 {
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    margin-top: 35px;
+}
+
+
+.reptile-intro {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #4f554f;
+}
+
+
+.reptile-detail-text p:not(.label):not(.reptile-intro) {
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+.reptile-detail-text ul {
+    padding-left: 20px;
+
+    color: #666;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   23. ABOUT
+   ===================================================== */
+
+.about-page {
+    display: flex;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.about-page-image {
+    width: 50%;
+
+    height: 550px;
+
+    background-color: #304b3b;
+
+    color: #d9d2bd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.about-page-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+
+.about-page-text {
+    width: 50%;
+}
+
+
+.about-page-text h1 {
+    font-size: 45px;
+
+    line-height: 1.05;
+}
+
+
+.about-page-text p:not(.label) {
+    color: #666;
+
+    line-height: 1.8;
+}
+
+
+.about-values {
+    margin-top: 100px;
+
+    padding: 70px;
+
+    text-align: center;
+
+    background-color: #e6e1d2;
+}
+
+
+.about-values h2 {
+    font-size: 35px;
+}
+
+
+/* =====================================================
+   24. CONTACT
+   ===================================================== */
+
+.contact-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+
+.contact-info h2 {
+    font-size: 45px;
+}
+
+
+.contact-info > p {
+    color: #666;
+
+    line-height: 1.7;
+
+    max-width: 450px;
+}
+
+
+.contact-item {
+    margin-top: 35px;
+}
+
+
+.contact-item strong {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+.contact-item p {
+    color: #666;
+}
+
+
+.contact-form {
+    background-color: #e6e1d2;
+
+    padding: 40px;
+}
+
+
+.contact-form form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.contact-form label {
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+
+    padding: 15px;
+
+    background-color: #f3f0e7;
+
+    font-family: Arial;
+
+    font-size: 14px;
+}
+
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+
+.contact-form button,
+.cart-total button {
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border: none;
+
+    background-color: #263d30;
+
+    color: white;
+
+    cursor: pointer;
+
+    letter-spacing: 2px;
+}
+
+
+.contact-form button:hover,
+.cart-total button:hover {
+    background-color: #b39a64;
+}
+
+
+/* =====================================================
+   25. CART
+   ===================================================== */
+
+.cart-container {
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+.cart-item {
+    display: flex;
+
+    gap: 30px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #ccc;
+}
+
+
+.cart-image {
+    width: 180px;
+
+    height: 180px;
+
+    flex-shrink: 0;
+
+    background-color: #304b3b;
+
+    color: #d9d2bd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+
+.cart-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+
+.cart-info {
+    padding-top: 10px;
+}
+
+
+.cart-info h2 {
+    font-size: 24px;
+}
+
+
+.cart-info p {
+    color: #666;
+}
+
+
+.cart-total {
+    text-align: right;
+
+    padding-top: 50px;
+}
+
+
+.cart-total p {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+.cart-total h2 {
+    font-size: 35px;
+}
+
+
+/* =====================================================
+   TAMBAHAN: FITUR KERANJANG INTERAKTIF
+   ===================================================== */
+
+/* Ringkasan total belanja */
+.cart-summary {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #193329;
+    color: #f3f0e7;
+    border-radius: 12px;
+}
+
+.cart-summary h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.cart-summary #cart-total {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+/* Tombol tambah, kurang, dan hapus */
+.cart-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.cart-controls button {
+    padding: 8px 13px;
+    border: 1px solid #193329;
+    border-radius: 5px;
+    background-color: #193329;
+    color: #f3f0e7;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cart-controls button:hover {
+    background-color: #c5a76a;
+    color: #193329;
+}
+
+.cart-controls span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Pesan saat keranjang kosong */
+.cart-empty {
+    padding: 30px 15px;
+    text-align: center;
+    color: #666;
+}
+
+/* Tombol tambah ke keranjang pada halaman produk */
+.add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 11px 14px;
+    margin: 10px 0;
+    border: 1px solid #193329;
+    border-radius: 5px;
+    background-color: #193329;
+    color: #f3f0e7;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add-to-cart:hover {
+    background-color: #c5a76a;
+    color: #193329;
+}
+
+/* Tampilan layar kecil */
+@media (max-width: 600px) {
+    .cart-container {
+        padding: 0 12px;
+    }
+
+    .cart-item {
+        gap: 15px;
+        padding: 18px 0;
+    }
+
+    .cart-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cart-info h2 {
+        font-size: 18px;
+    }
+
+    .cart-summary {
+        padding: 18px;
+    }
+
+    .cart-summary #cart-total {
+        font-size: 24px;
+    }
+}
+
+/* WARNA TULISAN LANJUT BELANJA */
+.cart-summary a {
+    color: #ffffff;
+}
+
+.cart-summary a:hover {
+    color: #ffffff;
+}
+
+/* =====================================================
+   26. PRODUCT DETAIL
+   ===================================================== */
+
+.detail-container {
+    width: 86%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 80px 0;
+}
+
+
+.detail {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.detail-image {
+    height: 550px;
+
+    background-color: #304b3b;
+
+    color: #d9d2bd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.detail-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.detail-text h1 {
+    font-size: 45px;
+
+    line-height: 1.05;
+}
+
+
+.detail-text .price {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #263d30;
+}
+
+
+.detail-text p {
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+.detail-text button {
+    margin-top: 20px;
+
+    padding: 16px 25px;
+
+    border: none;
+
+    background-color: #263d30;
+
+    color: white;
+
+    cursor: pointer;
+
+    letter-spacing: 1px;
+}
+
+
+.detail-text button:hover {
+    background-color: #b39a64;
+}
+
+
+/* =====================================================
+   27. TABLET
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    header {
+        min-height: 200px;
+    }
+
+
+    nav {
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+
+    .service-grid,
+    .guide-grid,
+    .reptile-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .care-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .about-page {
+        flex-direction: column;
+    }
+
+
+    .about-page-image,
+    .about-page-text {
+        width: 100%;
+    }
+
+
+    .contact-layout {
+        gap: 50px;
+    }
+
+
+    .reptile-detail {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .reptile-detail-image {
+        height: 450px;
+    }
+
+
+    .reptile-detail-text h1 {
+        font-size: 45px;
+    }
+
+}
+
+
+/* =====================================================
+   28. MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 25px 5%;
+
+        min-height: auto;
+    }
+
+
+    .logo h1 {
+        font-size: 35px;
+    }
+
+
+    nav {
+       margin-top: 0;
+       padding: 18px 5%;
+       gap: 15px;
+    }
+
+
+    nav > a,
+    .nav-dropdown summary {
+        font-size: 11px;
+    }
+
+
+    iframe {
+        height: 1200px;
+    }
+
+
+    .page-container {
+        width: 90%;
+
+        padding: 55px 0;
+    }
+
+
+    .hero {
+        flex-direction: column;
+    }
+
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+
+    .hero-text {
+        padding: 70px 8%;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .hero-image {
+        height: 400px;
+    }
+
+
+    .intro {
+        flex-direction: column;
+
+        padding: 80px 8%;
+
+        gap: 30px;
+    }
+
+
+    .intro-title,
+    .intro-text {
+        width: 100%;
+    }
+
+
+    .statistics {
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+
+    .service-grid,
+    .guide-grid,
+    .reptile-grid,
+    .shop-grid,
+    .care-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .services,
+    .products,
+    .guide {
+        padding: 80px 8%;
+    }
+
+
+    .care {
+        flex-direction: column;
+    }
+
+
+    .care-image,
+    .care-text {
+        width: 100%;
+    }
+
+
+    .care-image {
+        height: 400px;
+    }
+
+
+    .care-text {
+        padding: 70px 8%;
+    }
+
+
+    .faq {
+        padding: 80px 8%;
+    }
+
+
+    .page-heading h1,
+    .recommendation-header h1 {
+        font-size: 40px;
+    }
+
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .about-page-text h1,
+    .detail-text h1 {
+        font-size: 38px;
+    }
+
+
+    .detail {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .detail-image {
+        height: 400px;
+    }
+
+
+    .cart-item {
+        flex-direction: column;
+    }
+
+
+    .cart-image {
+        width: 100%;
+
+        height: 300px;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+
+    /* Dropdown mobile */
+
+    .nav-dropdown-content {
+        right: auto;
+
+        left: 0;
+    }
+
+}
+
+
+/* ==============================
+   SHOP PAGE
+============================== */
+
+.shop-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 30px;
+}
+
+.page-heading {
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: #b69a63;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.page-heading h1 {
+    color: #193329;
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.page-heading > p:last-child {
+    color: #777;
+}
+
+/* Kategori */
+
+.category-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.category-menu a {
+    display: inline-block;
+    padding: 10px 17px;
+    border: 1px solid #d8d4c8;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #193329;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.category-menu a:hover {
+    background: #193329;
+    border-color: #193329;
+    color: #fff;
+}
+}
+
+/* =========================================
+   DETAIL PRODUK - REPTILIA
+========================================= */
+
+.detail-container {
+    width: 86%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Frame gambar */
+
+.detail-image {
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #e6e1d2;
+}
+
+.detail-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+/* Informasi produk */
+
+.detail-text {
+    padding: 15px 0;
+}
+
+.detail-text .label {
+    color: #71806b;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.detail-text h1 {
+    margin: 20px 0;
+    color: #193329;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.detail-text .price {
+    margin: 20px 0;
+    color: #263d30;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.detail-text p:not(.label):not(.price) {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.detail-text .button {
+    margin-top: 25px;
+    background-color: #263d30;
+    color: white;
+    text-decoration: none;
+    padding: 15px 22px;
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.detail-text .button:hover {
+    background-color: #b39a64;
+}
+
+/* Tampilan tablet dan HP */
+
+@media (max-width: 1000px) {
+    .detail {
+        gap: 35px;
+    }
+
+    .detail-image {
+        height: 420px;
+    }
+
+    .detail-text h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 650px) {
+    .detail-container {
+        width: 90%;
+        padding: 45px 0;
+    }
+
+    .detail {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .detail-image {
+        height: 350px;
+    }
+
+    .detail-text h1 {
+        font-size: 36px;
+    }
+}
+
+/* IFRAME: mengikuti tinggi konten */
+main iframe {
+    display: block;
+    width: 100%;
+    height: 1000px;
+    border: none;
+    overflow: hidden;
+}
+
+/* Navbar tetap menempel */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #193329;
+}
+
+/* Footer tetap di bawah konten */
+footer {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+/* FILTER KATEGORI PRODUK REPTILIA */
+.category-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.category-menu a {
+    padding: 9px 16px;
+    border: 1px solid #193329;
+    border-radius: 20px;
+    background-color: #f3f0e7;
+    color: #193329;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.category-menu a:hover,
+.category-menu a.active {
+    background-color: #193329;
+    color: #f3f0e7;
+}
+
+/* SEMBUNYIKAN PRODUK YANG TIDAK SESUAI */
+.shop-product[hidden] {
+    display: none !important;
+}
